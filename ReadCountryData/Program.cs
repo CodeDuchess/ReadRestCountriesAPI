@@ -18,7 +18,7 @@ namespace ReadCountryData
             public string Symbol { get; set; }
         }
 
-        public class Country
+        public class Country 
         {
 
             public List<Currency> Currencies { get; set; }
@@ -45,8 +45,6 @@ namespace ReadCountryData
             HttpResponseMessage response = http.GetAsync(new Uri(url)).Result;
 
             string responseBody = response.Content.ReadAsStringAsync().Result;
-
-            //Console.WriteLine(responseBody);
 
             var countries = JsonConvert.DeserializeObject<List<Country>>(responseBody);
             PrintCountryInfo(countries);
