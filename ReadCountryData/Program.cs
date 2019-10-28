@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+//JsonConverter. Converts an object to and from JSON.
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
